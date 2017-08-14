@@ -8,6 +8,8 @@
       "name": "Tarik Curto",
       "email": "centro.tarik@live.com"
     }
-  ]
-
+  ],
+  "require": {
+    "phpcollection/phpcollection": "^0.5.0"
+  }
 }
