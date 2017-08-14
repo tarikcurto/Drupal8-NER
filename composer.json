@@ -1,7 +1,8 @@
 {
   "name": "tarikcurto/ner",
-  "description": "NER (Named Entity Recognition) - base module",
+  "description": "NER (Named Entity Recognition) - base module.",
   "type": "drupal-module",
+  "license": "GPL-2.0+",
   "authors": [
     {
       "name": "Tarik Curto",
