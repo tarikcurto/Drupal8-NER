@@ -1,0 +1,12 @@
+{
+  "name": "tarikcurto/ner",
+  "description": "NER (Named Entity Recognition) - base module",
+  "type": "drupal-module",
+  "authors": [
+    {
+      "name": "Tarik Curto",
+      "email": "centro.tarik@live.com"
+    }
+  ]
+
+}
