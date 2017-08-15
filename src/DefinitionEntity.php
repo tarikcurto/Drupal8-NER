@@ -15,14 +15,14 @@ class DefinitionEntity
      *
      * @var string
      */
-    private $definition;
+    private $longId;
 
     /**
      * Definition class name.
      *
      * @var string
      */
-    private $definitionSort;
+    private $sortId;
 
     /**
      * Extraction algorithm.
@@ -34,41 +34,41 @@ class DefinitionEntity
     /**
      * @var PropertyDefinition[]
      */
-    private $propertyDefinitionMap;
+    private $propertyDefinitionMap = [];
 
     /**
      * @return string
      */
-    public function getDefinition(): string
+    public function getLongId(): string
     {
-        return $this->definition;
+        return $this->longId;
     }
 
     /**
-     * @param string $definition
+     * @param string $longId
      * @return DefinitionEntity
      */
-    public function setDefinition(string $definition): DefinitionEntity
+    public function setLongId(string $longId): DefinitionEntity
     {
-        $this->definition = $definition;
+        $this->longId = $longId;
         return $this;
     }
 
     /**
      * @return string
      */
-    public function getDefinitionSort(): string
+    public function getSortId(): string
     {
-        return $this->definitionSort;
+        return $this->sortId;
     }
 
     /**
-     * @param string $definitionSort
+     * @param string $sortId
      * @return DefinitionEntity
      */
-    public function setDefinitionSort(string $definitionSort): DefinitionEntity
+    public function setSortId(string $sortId): DefinitionEntity
     {
-        $this->definitionSort = $definitionSort;
+        $this->sortId = $sortId;
         return $this;
     }
 

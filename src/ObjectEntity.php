@@ -25,20 +25,42 @@ class ObjectEntity
     private $type;
 
     /**
+     * Analyzed content of current object.
+     *
+     * @var string|object
+     */
+    private $objectContent;
+
+    /**
      * Map of map of definition for
      * current object.
      *
      * Explanation:
      *  - 1st map: Sub-object of current object: A partial text or
      *  object of a full object text where NER has definitions.
+     *  Don't set id, type, subObject properties.
      *  - 2 nd map: Definitions for current partial of text
-     *  of sub-object.
+     *  of sub-object. Use $definitionMap property.
+     *
+     * If you don´t have a partial object for current object:
+     *  $partialObjectMap = [] || null
+     *  $definitionMap = [...]
      *
      * [ text|object partial => DefinitionMap ]
      *
-     * @var PartialObjectEntity[]
+     * @var ObjectEntity[]
      */
-    private $partialObjectMap;
+    private $subObjectMap = [];
+
+    /**
+     * Map of definitions for current
+     * text full || partial.
+     *
+     * [ definitionClassName => Definition ]
+     *
+     * @var DefinitionEntity[]
+     */
+    private $definitionMap = [];
 
     /**
      * @return int|string
@@ -77,20 +99,56 @@ class ObjectEntity
     }
 
     /**
-     * @return PartialObjectEntity[]
+     * @return object|string
      */
-    public function getPartialObjectMap(): array
+    public function getObjectContent()
     {
-        return $this->partialObjectMap;
+        return $this->objectContent;
     }
 
     /**
-     * @param PartialObjectEntity[] $partialObjectMap
+     * @param object|string $objectContent
      * @return ObjectEntity
      */
-    public function setPartialObjectMap(array $partialObjectMap): ObjectEntity
+    public function setObjectContent($objectContent)
     {
-        $this->partialObjectMap = $partialObjectMap;
+        $this->objectContent = $objectContent;
+        return $this;
+    }
+
+    /**
+     * @return ObjectEntity[]
+     */
+    public function getSubObjectMap(): array
+    {
+        return $this->subObjectMap;
+    }
+
+    /**
+     * @param ObjectEntity[] $subObjectMap
+     * @return ObjectEntity
+     */
+    public function setSubObjectMap(array $subObjectMap): ObjectEntity
+    {
+        $this->subObjectMap = $subObjectMap;
+        return $this;
+    }
+
+    /**
+     * @return DefinitionEntity[]
+     */
+    public function getDefinitionMap(): array
+    {
+        return $this->definitionMap;
+    }
+
+    /**
+     * @param DefinitionEntity[] $definitionMap
+     * @return ObjectEntity
+     */
+    public function setDefinitionMap(array $definitionMap): ObjectEntity
+    {
+        $this->definitionMap = $definitionMap;
         return $this;
     }
 }
