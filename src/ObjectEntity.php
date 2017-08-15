@@ -1,13 +1,14 @@
 <?php
 
-namespace Drupal\Ner;
+namespace Drupal\ner;
 
 /**
  * NER data group
  *
  * @package Drupal\Ner
  */
-class ObjectEntity {
+class ObjectEntity
+{
 
     /**
      * @var string

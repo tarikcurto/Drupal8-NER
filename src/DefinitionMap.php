@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Ner;
+namespace Drupal\ner;
 
 use PhpCollection\Map;
 
