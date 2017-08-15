@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\ner;
+namespace Drupal\ner\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 

@@ -3,7 +3,7 @@
 namespace Drupal\ner;
 
 /**
- * NER data group
+ * NER object.
  *
  * @package Drupal\Ner
  */
@@ -11,88 +11,86 @@ class ObjectEntity
 {
 
     /**
+     * Object id
+     *
+     * @var int|string
+     */
+    private $id;
+
+    /**
+     * Object type
+     *
      * @var string
      */
-    private $name;
+    private $type;
 
     /**
-     * @var string
+     * Map of map of definition for
+     * current object.
+     *
+     * Explanation:
+     *  - 1st map: Sub-object of current object: A partial text or
+     *  object of a full object text where NER has definitions.
+     *  - 2 nd map: Definitions for current partial of text
+     *  of sub-object.
+     *
+     * [ text|object partial => DefinitionMap ]
+     *
+     * @var PartialObjectEntity[]
      */
-    private $method;
+    private $partialObjectMap;
 
     /**
-     * @var string
+     * @return int|string
      */
-    private $text;
-
-    /**
-     * @var DefinitionMap
-     */
-    private $source;
-
-    /**
-     * @return string
-     */
-    public function getName()
+    public function getId()
     {
-        return $this->name;
+        return $this->id;
     }
 
     /**
-     * @param string $name
+     * @param int|string $id
+     * @return ObjectEntity
      */
-    public function setName($name)
+    public function setId($id)
     {
-        $this->name = $name;
-    }
-
-    /**
-     * @return string
-     */
-    public function getMethod()
-    {
-        return $this->method;
-    }
-
-    /**
-     * @param string $method
-     */
-    public function setMethod($method)
-    {
-        $this->method = $method;
+        $this->id = $id;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getText()
+    public function getType(): string
     {
-        return $this->text;
+        return $this->type;
     }
 
     /**
-     * @param string $text
+     * @param string $type
+     * @return ObjectEntity
      */
-    public function setText($text)
+    public function setType(string $type): ObjectEntity
     {
-        $this->text = $text;
+        $this->type = $type;
+        return $this;
     }
 
     /**
-     * @return DefinitionMap
+     * @return PartialObjectEntity[]
      */
-    public function getSource()
+    public function getPartialObjectMap(): array
     {
-        return $this->source;
+        return $this->partialObjectMap;
     }
 
     /**
-     * @param DefinitionMap $source
+     * @param PartialObjectEntity[] $partialObjectMap
+     * @return ObjectEntity
      */
-    public function setSource($source)
+    public function setPartialObjectMap(array $partialObjectMap): ObjectEntity
     {
-        $this->source = $source;
+        $this->partialObjectMap = $partialObjectMap;
+        return $this;
     }
-
-
 }
