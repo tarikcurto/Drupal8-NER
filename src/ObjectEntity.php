@@ -15,21 +15,21 @@ class ObjectEntity
      *
      * @var int|string
      */
-    private $id;
+    protected $id;
 
     /**
      * Object type
      *
      * @var string
      */
-    private $type;
+    protected $type;
 
     /**
      * Analyzed content of current object.
      *
      * @var string|object
      */
-    private $objectContent;
+    protected $content;
 
     /**
      * Map of map of definition for
@@ -50,7 +50,7 @@ class ObjectEntity
      *
      * @var ObjectEntity[]
      */
-    private $subObjectMap = [];
+    protected $subObjectMap = [];
 
     /**
      * Map of definitions for current
@@ -60,7 +60,7 @@ class ObjectEntity
      *
      * @var DefinitionEntity[]
      */
-    private $definitionMap = [];
+    protected $definitionMap = [];
 
     /**
      * @return int|string
@@ -101,18 +101,18 @@ class ObjectEntity
     /**
      * @return object|string
      */
-    public function getObjectContent()
+    public function getContent()
     {
-        return $this->objectContent;
+        return $this->content;
     }
 
     /**
-     * @param object|string $objectContent
+     * @param object|string $content
      * @return ObjectEntity
      */
-    public function setObjectContent($objectContent)
+    public function setContent($content)
     {
-        $this->objectContent = $objectContent;
+        $this->content = $content;
         return $this;
     }
 

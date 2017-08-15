@@ -15,14 +15,14 @@ class PropertyDefinition
      *
      * @var string
      */
-    private $property;
+    protected $property;
 
     /**
      * Value of definition.
      *
      * @var string
      */
-    private $value;
+    protected $value;
 
     /**
      * @return string

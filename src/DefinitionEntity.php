@@ -15,26 +15,26 @@ class DefinitionEntity
      *
      * @var string
      */
-    private $longId;
+    protected $longId;
 
     /**
      * Definition class name.
      *
      * @var string
      */
-    private $sortId;
+    protected $sortId;
 
     /**
      * Extraction algorithm.
      *
      * @var string
      */
-    private $extractionAlgorithm;
+    protected $extractionAlgorithm;
 
     /**
      * @var PropertyDefinition[]
      */
-    private $propertyDefinitionMap = [];
+    protected $propertyDefinitionMap = [];
 
     /**
      * @return string
