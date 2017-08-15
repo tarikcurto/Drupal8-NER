@@ -50,7 +50,7 @@ class ObjectEntity
      *
      * @var ObjectEntity[]
      */
-    protected $subObjectMap = [];
+    protected $subObjectMap;
 
     /**
      * Map of definitions for current
@@ -60,7 +60,7 @@ class ObjectEntity
      *
      * @var DefinitionEntity[]
      */
-    protected $definitionMap = [];
+    protected $definitionMap;
 
     /**
      * @return int|string

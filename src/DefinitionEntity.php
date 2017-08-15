@@ -32,9 +32,9 @@ class DefinitionEntity
     protected $extractionAlgorithm;
 
     /**
-     * @var PropertyDefinition[]
+     * @var PropertyDefinitionEntity[]
      */
-    protected $propertyDefinitionMap = [];
+    protected $propertyDefinitionMap;
 
     /**
      * @return string
@@ -91,7 +91,7 @@ class DefinitionEntity
     }
 
     /**
-     * @return PropertyDefinition[]
+     * @return PropertyDefinitionEntity[]
      */
     public function getPropertyDefinitionMap(): array
     {
@@ -99,7 +99,7 @@ class DefinitionEntity
     }
 
     /**
-     * @param PropertyDefinition[] $propertyDefinitionMap
+     * @param PropertyDefinitionEntity[] $propertyDefinitionMap
      * @return DefinitionEntity
      */
     public function setPropertyDefinitionMap(array $propertyDefinitionMap): DefinitionEntity

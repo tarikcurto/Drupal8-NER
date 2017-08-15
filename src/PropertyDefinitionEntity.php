@@ -7,7 +7,7 @@ namespace Drupal\ner;
  *
  * @package Drupal\ner
  */
-class PropertyDefinition
+class PropertyDefinitionEntity
 {
 
     /**
@@ -34,9 +34,9 @@ class PropertyDefinition
 
     /**
      * @param string $property
-     * @return PropertyDefinition
+     * @return PropertyDefinitionEntity
      */
-    public function setProperty(string $property): PropertyDefinition
+    public function setProperty(string $property): PropertyDefinitionEntity
     {
         $this->property = $property;
         return $this;
@@ -52,9 +52,9 @@ class PropertyDefinition
 
     /**
      * @param string $value
-     * @return PropertyDefinition
+     * @return PropertyDefinitionEntity
      */
-    public function setValue(string $value): PropertyDefinition
+    public function setValue(string $value): PropertyDefinitionEntity
     {
         $this->value = $value;
         return $this;
