@@ -137,7 +137,7 @@ class ObjectEntity
     /**
      * @return DefinitionEntity[]
      */
-    public function getDefinitionMap(): array
+    public function getDefinitionMap()
     {
         return $this->definitionMap;
     }
