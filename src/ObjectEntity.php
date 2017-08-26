@@ -32,27 +32,6 @@ class ObjectEntity
     protected $content;
 
     /**
-     * Map of map of definition for
-     * current object.
-     *
-     * Explanation:
-     *  - 1st map: Sub-object of current object: A partial text or
-     *  object of a full object text where NER has definitions.
-     *  Don't set id, type, subObject properties.
-     *  - 2 nd map: Definitions for current partial of text
-     *  of sub-object. Use $definitionMap property.
-     *
-     * If you don´t have a partial object for current object:
-     *  $partialObjectMap = [] || null
-     *  $definitionMap = [...]
-     *
-     * [ text|object partial => DefinitionMap ]
-     *
-     * @var ObjectEntity[]
-     */
-    protected $subObjectMap;
-
-    /**
      * Map of definitions for current
      * text full || partial.
      *
@@ -113,24 +92,6 @@ class ObjectEntity
     public function setContent($content)
     {
         $this->content = $content;
-        return $this;
-    }
-
-    /**
-     * @return ObjectEntity[]
-     */
-    public function getSubObjectMap(): array
-    {
-        return $this->subObjectMap;
-    }
-
-    /**
-     * @param ObjectEntity[] $subObjectMap
-     * @return ObjectEntity
-     */
-    public function setSubObjectMap(array $subObjectMap): ObjectEntity
-    {
-        $this->subObjectMap = $subObjectMap;
         return $this;
     }
 
