@@ -32,6 +32,14 @@ class DefinitionEntity
     protected $extractionAlgorithm;
 
     /**
+     * Text content when extraction
+     * algorithms works.
+     *
+     * @var string
+     */
+    protected $content;
+
+    /**
      * @var PropertyDefinitionEntity[]
      */
     protected $propertyDefinitionMap;
@@ -69,6 +77,24 @@ class DefinitionEntity
     public function setSortId(string $sortId): DefinitionEntity
     {
         $this->sortId = $sortId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContent(): string
+    {
+        return $this->content;
+    }
+
+    /**
+     * @param string $content
+     * @return DefinitionEntity
+     */
+    public function setContent(string $content): DefinitionEntity
+    {
+        $this->content = $content;
         return $this;
     }
 
