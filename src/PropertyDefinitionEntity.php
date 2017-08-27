@@ -1,4 +1,13 @@
 <?php
+/**
+ * DRUPAL 8 NER.
+ * Copyright (C) 2017. Tarik Curto <centro.tarik@live.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ */
 
 namespace Drupal\ner;
 
@@ -7,8 +16,7 @@ namespace Drupal\ner;
  *
  * @package Drupal\ner
  */
-class PropertyDefinitionEntity
-{
+class PropertyDefinitionEntity {
 
     /**
      * Property key of definition.
@@ -27,8 +35,7 @@ class PropertyDefinitionEntity
     /**
      * @return string
      */
-    public function getProperty(): string
-    {
+    public function getProperty(): string {
         return $this->property;
     }
 
@@ -36,8 +43,7 @@ class PropertyDefinitionEntity
      * @param string $property
      * @return PropertyDefinitionEntity
      */
-    public function setProperty(string $property): PropertyDefinitionEntity
-    {
+    public function setProperty(string $property): PropertyDefinitionEntity {
         $this->property = $property;
         return $this;
     }
@@ -45,8 +51,7 @@ class PropertyDefinitionEntity
     /**
      * @return string
      */
-    public function getValue(): string
-    {
+    public function getValue(): string {
         return $this->value;
     }
 
@@ -54,8 +59,7 @@ class PropertyDefinitionEntity
      * @param string $value
      * @return PropertyDefinitionEntity
      */
-    public function setValue(string $value): PropertyDefinitionEntity
-    {
+    public function setValue(string $value): PropertyDefinitionEntity {
         $this->value = $value;
         return $this;
     }

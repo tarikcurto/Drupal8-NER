@@ -1,4 +1,13 @@
 <?php
+/**
+ * DRUPAL 8 NER.
+ * Copyright (C) 2017. Tarik Curto <centro.tarik@live.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ */
 
 namespace Drupal\ner;
 
@@ -7,8 +16,7 @@ namespace Drupal\ner;
  *
  * @package Drupal\ner
  */
-class DefinitionEntity
-{
+class DefinitionEntity {
 
     /**
      * Definition class name + extraction algorithm.
@@ -47,8 +55,7 @@ class DefinitionEntity
     /**
      * @return string
      */
-    public function getLongId(): string
-    {
+    public function getLongId(): string {
         return $this->longId;
     }
 
@@ -56,8 +63,7 @@ class DefinitionEntity
      * @param string $longId
      * @return DefinitionEntity
      */
-    public function setLongId(string $longId): DefinitionEntity
-    {
+    public function setLongId(string $longId): DefinitionEntity {
         $this->longId = $longId;
         return $this;
     }
@@ -65,8 +71,7 @@ class DefinitionEntity
     /**
      * @return string
      */
-    public function getSortId(): string
-    {
+    public function getSortId(): string {
         return $this->sortId;
     }
 
@@ -74,8 +79,7 @@ class DefinitionEntity
      * @param string $sortId
      * @return DefinitionEntity
      */
-    public function setSortId(string $sortId): DefinitionEntity
-    {
+    public function setSortId(string $sortId): DefinitionEntity {
         $this->sortId = $sortId;
         return $this;
     }
@@ -83,8 +87,7 @@ class DefinitionEntity
     /**
      * @return string
      */
-    public function getContent(): string
-    {
+    public function getContent(): string {
         return $this->content;
     }
 
@@ -92,8 +95,7 @@ class DefinitionEntity
      * @param string $content
      * @return DefinitionEntity
      */
-    public function setContent(string $content): DefinitionEntity
-    {
+    public function setContent(string $content): DefinitionEntity {
         $this->content = $content;
         return $this;
     }
@@ -101,8 +103,7 @@ class DefinitionEntity
     /**
      * @return string
      */
-    public function getExtractionAlgorithm(): string
-    {
+    public function getExtractionAlgorithm(): string {
         return $this->extractionAlgorithm;
     }
 
@@ -110,8 +111,7 @@ class DefinitionEntity
      * @param string $extractionAlgorithm
      * @return DefinitionEntity
      */
-    public function setExtractionAlgorithm(string $extractionAlgorithm): DefinitionEntity
-    {
+    public function setExtractionAlgorithm(string $extractionAlgorithm): DefinitionEntity {
         $this->extractionAlgorithm = $extractionAlgorithm;
         return $this;
     }
@@ -119,8 +119,7 @@ class DefinitionEntity
     /**
      * @return PropertyDefinitionEntity[]
      */
-    public function getPropertyDefinitionMap(): array
-    {
+    public function getPropertyDefinitionMap(): array {
         return $this->propertyDefinitionMap;
     }
 
@@ -128,8 +127,7 @@ class DefinitionEntity
      * @param PropertyDefinitionEntity[] $propertyDefinitionMap
      * @return DefinitionEntity
      */
-    public function setPropertyDefinitionMap(array $propertyDefinitionMap): DefinitionEntity
-    {
+    public function setPropertyDefinitionMap(array $propertyDefinitionMap): DefinitionEntity {
         $this->propertyDefinitionMap = $propertyDefinitionMap;
         return $this;
     }

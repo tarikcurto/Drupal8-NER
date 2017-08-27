@@ -1,4 +1,13 @@
 <?php
+/**
+ * DRUPAL 8 NER.
+ * Copyright (C) 2017. Tarik Curto <centro.tarik@live.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ */
 
 namespace Drupal\ner;
 
@@ -7,8 +16,7 @@ namespace Drupal\ner;
  *
  * @package Drupal\Ner
  */
-class ObjectEntity
-{
+class ObjectEntity {
 
     /**
      * Object id
@@ -44,8 +52,7 @@ class ObjectEntity
     /**
      * @return int|string
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -53,8 +60,7 @@ class ObjectEntity
      * @param int|string $id
      * @return ObjectEntity
      */
-    public function setId($id)
-    {
+    public function setId($id) {
         $this->id = $id;
         return $this;
     }
@@ -62,8 +68,7 @@ class ObjectEntity
     /**
      * @return string
      */
-    public function getType(): string
-    {
+    public function getType(): string {
         return $this->type;
     }
 
@@ -71,8 +76,7 @@ class ObjectEntity
      * @param string $type
      * @return ObjectEntity
      */
-    public function setType(string $type): ObjectEntity
-    {
+    public function setType(string $type): ObjectEntity {
         $this->type = $type;
         return $this;
     }
@@ -80,8 +84,7 @@ class ObjectEntity
     /**
      * @return object|string
      */
-    public function getContent()
-    {
+    public function getContent() {
         return $this->content;
     }
 
@@ -89,8 +92,7 @@ class ObjectEntity
      * @param object|string $content
      * @return ObjectEntity
      */
-    public function setContent($content)
-    {
+    public function setContent($content) {
         $this->content = $content;
         return $this;
     }
@@ -98,8 +100,7 @@ class ObjectEntity
     /**
      * @return DefinitionEntity[]
      */
-    public function getDefinitionMap()
-    {
+    public function getDefinitionMap() {
         return $this->definitionMap;
     }
 
@@ -107,8 +108,7 @@ class ObjectEntity
      * @param DefinitionEntity[] $definitionMap
      * @return ObjectEntity
      */
-    public function setDefinitionMap(array $definitionMap): ObjectEntity
-    {
+    public function setDefinitionMap(array $definitionMap): ObjectEntity {
         $this->definitionMap = $definitionMap;
         return $this;
     }
