@@ -1,5 +1,5 @@
 name: NER
-description: NER (Named Entity Recognition) - base module.
+description: Custom NER module container for Drupal 8.
 package: Custom
 
 type: module

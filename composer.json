@@ -1,6 +1,6 @@
 {
   "name": "tarikcurto/ner",
-  "description": "NER (Named Entity Recognition) - base module.",
+  "description": "Custom NER module container for Drupal 8.",
   "type": "drupal-module",
   "license": "GPL-2.0+",
   "authors": [
